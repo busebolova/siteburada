@@ -20,8 +20,6 @@ function initSite() {
     });
   });
 
-  gsap.to('.hero-stamp', { rotate: 90, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 } });
-  gsap.to('.marquee div', { xPercent: -35, ease: 'none', scrollTrigger: { trigger: '.marquee', start: 'top bottom', end: 'bottom top', scrub: 1 } });
   gsap.from('.price-main', { yPercent: 16, opacity: 0, duration: 1.1, scrollTrigger: { trigger: '.price-section', start: 'top 66%', once: true } });
   gsap.from('.steps article', { y: 70, opacity: 0, duration: .9, stagger: .1, scrollTrigger: { trigger: '.steps', start: 'top 78%', once: true } });
   gsap.from('.reference-card', { y: 90, opacity: 0, duration: 1, stagger: .12, scrollTrigger: { trigger: '.reference-grid', start: 'top 75%', once: true } });
