@@ -9,6 +9,7 @@
   const image = showcase.querySelector('.hero-project-image');
   const metadata = showcase.querySelector('.hero-project-bottom');
   const buttons = [...showcase.querySelectorAll('[data-project]')];
+  if (!image || !metadata || !buttons.length) return;
   metadata.setAttribute('aria-live', 'polite');
   buttons.forEach((button, index) => button.addEventListener('click', () => {
     if (button.getAttribute('aria-pressed') === 'true') return;
