@@ -22,7 +22,10 @@ function initSite() {
 
   gsap.from('.price-main', { yPercent: 16, opacity: 0, duration: 1.1, scrollTrigger: { trigger: '.price-section', start: 'top 66%', once: true } });
   gsap.from('.steps article', { y: 70, opacity: 0, duration: .9, stagger: .1, scrollTrigger: { trigger: '.steps', start: 'top 78%', once: true } });
-  gsap.from('.reference-card', { y: 90, opacity: 0, duration: 1, stagger: .12, scrollTrigger: { trigger: '.reference-grid', start: 'top 75%', once: true } });
+  const referenceGrid = document.querySelector('.reference-grid');
+  if (referenceGrid) {
+    gsap.from('.reference-card', { y: 90, opacity: 0, duration: 1, stagger: .12, scrollTrigger: { trigger: referenceGrid, start: 'top 75%', once: true } });
+  }
   gsap.from('.cta-section h2 span', { xPercent: -12, opacity: 0, duration: 1, scrollTrigger: { trigger: '.cta-section', start: 'top 60%', once: true } });
 }
 
