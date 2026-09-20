@@ -32,19 +32,52 @@
     <script type="application/ld+json">
       {
         "@context":"https://schema.org",
-        "@type":"ProfessionalService",
-        "name":"siteburada.",
-        "@id":"https://www.siteburada.com/#organization",
-        "url":"https://www.siteburada.com/",
-        "logo":"https://www.siteburada.com/assets/logo.svg",
-        "image":"https://www.siteburada.com/assets/ref-architecture-color.png",
-        "description":"İşletmeler için özgün, hızlı ve mobil uyumlu web sitesi tasarımı ve geliştirme hizmeti.",
-        "telephone":"+90 553 395 15 25",
-        "priceRange":"₺₺",
-        "areaServed":"TR",
-        "sameAs":["https://www.instagram.com/siteburadacom/"],
-        "serviceType":["Web tasarım","Kurumsal web sitesi","Web geliştirme","SEO altyapısı"],
-        "contactPoint":{"@type":"ContactPoint","telephone":"+90 553 395 15 25","contactType":"customer service","availableLanguage":"tr"}
+        "@graph":[
+          {
+            "@type":"ProfessionalService",
+            "@id":"https://www.siteburada.com/#organization",
+            "name":"siteburada.",
+            "url":"https://www.siteburada.com/",
+            "logo":"https://www.siteburada.com/assets/logo.svg",
+            "image":"https://www.siteburada.com/assets/ref-architecture-color.png",
+            "description":"İşletmeler için özgün, hızlı ve mobil uyumlu web sitesi tasarımı ve geliştirme hizmeti.",
+            "telephone":"+90 553 395 15 25",
+            "priceRange":"₺₺",
+            "areaServed":{"@type":"Country","name":"Türkiye"},
+            "sameAs":["https://www.instagram.com/siteburadacom/"],
+            "knowsAbout":["Web tasarımı","Kurumsal web sitesi","Mobil uyumlu web geliştirme","SEO altyapısı","Dijital marka deneyimi"],
+            "serviceType":["Web tasarım","Kurumsal web sitesi","Web geliştirme","SEO altyapısı"],
+            "hasOfferCatalog":{
+              "@type":"OfferCatalog",
+              "name":"siteburada web tasarım hizmetleri",
+              "itemListElement":[
+                {"@type":"Offer","itemOffered":{"@type":"Service","name":"Kurumsal web sitesi","description":"Markaya özel, mobil uyumlu ve yayına hazır kurumsal web sitesi."}},
+                {"@type":"Offer","itemOffered":{"@type":"Service","name":"Web tasarım ve geliştirme","description":"İşletmenin hedeflerine göre tasarlanan hızlı dijital deneyim."}},
+                {"@type":"Offer","itemOffered":{"@type":"Service","name":"SEO altyapısı","description":"Arama motorlarının anlayabileceği teknik ve içerik temeli."}}
+              ]
+            },
+            "contactPoint":{"@type":"ContactPoint","telephone":"+90 553 395 15 25","contactType":"customer service","availableLanguage":"tr"}
+          },
+          {
+            "@type":"WebSite",
+            "@id":"https://www.siteburada.com/#website",
+            "url":"https://www.siteburada.com/",
+            "name":"siteburada.",
+            "description":"İşletmeler için markaya özel web tasarım ve geliştirme hizmeti.",
+            "publisher":{"@id":"https://www.siteburada.com/#organization"},
+            "inLanguage":"tr-TR"
+          },
+          {
+            "@type":"WebPage",
+            "@id":"https://www.siteburada.com/#webpage",
+            "url":"https://www.siteburada.com/",
+            "name":"siteburada. | Web Tasarım ve Kurumsal Web Sitesi",
+            "description":"İşletmeler için markaya özel, hızlı ve mobil uyumlu web sitesi tasarımı ve geliştirme hizmeti.",
+            "isPartOf":{"@id":"https://www.siteburada.com/#website"},
+            "about":{"@id":"https://www.siteburada.com/#organization"},
+            "inLanguage":"tr-TR"
+          }
+        ]
       }
     </script>
   </head>
@@ -141,7 +174,7 @@
         </div>
       </section>
 
-      <section class="process section-dark">
+      <section class="process section-dark" id="process">
         <div class="section-index">04</div>
         <div class="process-head">
           <p class="section-label">NASIL<br />ÇALIŞIYOR?</p>
