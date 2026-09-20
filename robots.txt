@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://siteburada.com/sitemap.xml
+Sitemap: https://www.siteburada.com/sitemap.xml
